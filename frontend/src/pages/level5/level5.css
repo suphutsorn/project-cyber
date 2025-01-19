@@ -1,0 +1,130 @@
+/* level5.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a; /* สีพื้นหลังดำสนิท */
+    color: #ffffff; /* สีข้อความ */
+    font-family: "Arial, sans-serif";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ขยายเต็มหน้าจอ */
+    background: linear-gradient(to bottom, #000000, #0a0a0a); /* ไล่สีดำสนิท */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+    width: 100%;
+}
+
+.title {
+    font-size: 3rem;
+    color: #1e90ff; /* สีฟ้าเข้ม */
+    margin-bottom: 15px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    font-family: "Arial, sans-serif";
+}
+
+.highlight {
+    color: #031fc1; /* สีส้มเข้ม */
+    font-family: "Arial, sans-serif";
+}
+
+.chef-emoji {
+    font-size: 5rem;
+    margin: 25px 0;
+}
+
+.key-iv-display {
+    font-size: 1.2rem;
+    background: #121212; /* กล่องสีดำสนิท */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    color: #c0c0c0; /* สีเทาอ่อน */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* จัดให้อยู่กลางกล่อง */
+}
+
+
+
+.input-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* เพิ่มระยะห่าง */
+}
+
+.answer-input {
+    padding: 15px;
+    width: 350px;
+    border: 2px solid #1e90ff; /* เส้นขอบฟ้าเข้ม */
+    border-radius: 5px;
+    background: #121212; /* พื้นหลังสีดำ */
+    font-size: 1.1rem;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: #00bfff; /* เส้นขอบสีฟ้าสด */
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.9); /* เงาฟ้า */
+}
+
+.submit-button {
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    color: #ffffff;
+    background: linear-gradient(to right, #1c1c1c, #2f2f2f); /* ไล่สีดำ */
+    border: 2px solid #1e90ff; /* เส้นขอบฟ้า */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.8); /* เงาฟ้า */
+}
+
+.next-message {
+    margin-top: 25px;
+    font-size: 1.6rem;
+    color: #ff0000; /* สีเขียวมรกต */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.emoji-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.emoji-button {
+    font-size: 4rem; /* ขยายขนาดอิโมจิ */
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.emoji-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.6);
+}
