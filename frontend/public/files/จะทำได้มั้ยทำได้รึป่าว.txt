@@ -1,0 +1,17 @@
+p = 
+q = 
+d = 
+ciphertext =
+
+def rsa_decrypt(ciphertext, d, n):
+    plaintext = []
+    for c in ciphertext:
+        m = pow(_, _, _)  
+        plaintext.append(m)
+    return plaintext
+
+plaintext_numbers = rsa_decrypt(_, _, _)
+plaintext_message = ''.join([chr(num) for num in plaintext_numbers])
+
+
+print("Plaintext:", plaintext_message)

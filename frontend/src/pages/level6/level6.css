@@ -1,0 +1,79 @@
+.input-section6 {
+    position: absolute;
+    bottom: 120px;  /* ระยะห่างจากด้านล่างของหน้าจอ */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่าง input และ button */
+    align-items: center;
+}
+
+.answer-input6 {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #1e90ff; /* เส้นขอบฟ้าเข้ม */
+    border-radius: 5px;
+    background-color: #121212;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.answer-input6:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+}
+
+.submit-button6 {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    color: #ffffff;
+    background: linear-gradient(to right, #1c1c1c, #2f2f2f); /* ไล่สีดำ */
+    border: 2px solid #1e90ff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-button6:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+}
+.level6-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+}
+
+/* ก้อนที่ 1: 3 รูป */
+.image-group1 {
+    position: absolute;
+    top: 15%; /* ปรับพิกัดตามที่คุณต้องการ */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px; /* ระยะห่างระหว่างรูป */
+}
+
+/* ก้อนที่ 2: 2 รูป */
+.image-group2 {
+    position: absolute;
+    top: 55%; /* ปรับพิกัดตามที่คุณต้องการ */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px; /* ระยะห่างระหว่างรูป */
+}
+
+/* รูปภาพ */
+.grid-image6 {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
