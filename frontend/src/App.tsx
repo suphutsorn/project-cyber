@@ -7,6 +7,7 @@ import { Level5 } from './pages/level5/level5';
 import Covercyber from './pages/cover cyber/covercyber';
 import Level3 from './pages/level3/level3';
 import Level6 from './pages/level6/level6';
+import End from './pages/end/end';
 
 
 const App: React.FC = () => {
@@ -19,8 +20,9 @@ const App: React.FC = () => {
         <Route path="/006cc294a3f3688df73e08971f12f5e8" element={<DownloadPage/>} />
         <Route path="/Level2" element={<FindShareSecretNumber/>} />
         <Route path="/5003746503edd054450b1ef5703449e11230c420d0be521e80936ddfa1e9e6ad" element={<Level5 />} />
-        <Route path="/Level6" element={<Level6 />} />
+        <Route path="/260ada252gacaw55acscacf23accac74wa00csa598ecaf256efs" element={<Level6 />} />
         <Route path="/Covercyber" element={<Covercyber />} />
+        <Route path="/end" element={<End />} />
         
       </Routes>
     </Router>
