@@ -1,51 +1,30 @@
-import React, { useEffect } from 'react';
+import React from "react";
 
 const End: React.FC = () => {
-    useEffect(() => {
-        // Play the clapping sound when the component is rendered
-        const audio = new Audio('https://www.soundjay.com/button/beep-07.wav');
-        audio.play();
-        
-    }, []);
+  return (
+    <div style={styles.container}>
+      <img
+        src="/Cup Victory GIF by Sibur.gif" // ใส่ path ของไฟล์ GIF
+        alt="End GIF"
+        style={styles.image}
+      />
+    </div>
+  );
+};
 
-    return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100vh',
-                backgroundColor: '#000',
-                color: '#fff',
-            }}
-        >
-            <div
-                style={{
-                    animation: 'expand 3s infinite', // Animation to expand the emoji
-                    fontSize: '25rem', // Initial size of the emoji
-                }}
-            >
-                <div>🏆</div>
-            </div>
-
-            {/* Define the animation using inline CSS */}
-            <style>
-                {`
-                    @keyframes expand {
-                        0% {
-                            transform: scale(1);
-                        }
-                        50% {
-                            transform: scale(1.5);
-                        }
-                        100% {
-                            transform: scale(1);
-                        }
-                    }
-                `}
-            </style>
-        </div>
-    );
+const styles: { [key: string]: React.CSSProperties } = {
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+    backgroundColor: "#000",
+  },
+  image: {
+    width: "80vw", // ปรับให้ GIF ใหญ่ขึ้นตามขนาดของ viewport
+    maxWidth: "800px", // กำหนดขนาดสูงสุด
+    height: "auto",
+  },
 };
 
 export default End;
