@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 //import { validateAnswer, AnswerResponse } from './services/checkanswerlevel1.tsx'; // Import service
 import { validateAnswer, AnswerResponse } from '../../services/checkanswerlevel1';
+
 const Level1: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [showPopup, setShowPopup] = useState(false); // State สำหรับแสดง popup
   const [errorMessage, setErrorMessage] = useState<string | null>(null); // State สำหรับ error message
+  const [showInput, setShowInput] = useState(false); // State สำหรับการแสดง input และปุ่ม
 
   const handleSubmit = async () => {
     try {
@@ -20,83 +22,104 @@ const Level1: React.FC = () => {
     }
   };
 
+  const handleClick = () => {
+    setShowInput(true); // เมื่อคลิกให้แสดง input และปุ่ม
+  };
+
   return (
-    
-    <div style={{ backgroundColor: '#000000', height: '100vh', position: 'relative', color: '#FFFFFF' }}>
+    <div
+      style={{
+        backgroundColor: '#000000',
+        height: '100vh',
+        position: 'relative',
+        color: '#FFFFFF',
+      }}
+      onClick={handleClick} // ฟังการคลิกที่ส่วนใดก็ได้ของหน้าจอ
+    >
       {/* Hidden word "cyber" */}
-      <div style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '100px',
-        color: '#000000',
-        opacity: 0.3,
-      }}>hacker</div>
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          fontSize: '100px',
+          color: '#000000',
+          opacity: 0.3,
+        }}
+      >
+        hacker
+      </div>
 
-    <div style={{
-        position: 'absolute',
-        top: '60%',
-        left: '40%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '100px',
-        color: '#000000',
-        opacity: 0.3,
-      }}>CPE</div>
+      <div
+        style={{
+          position: 'absolute',
+          top: '60%',
+          left: '40%',
+          transform: 'translate(-50%, -50%)',
+          fontSize: '100px',
+          color: '#000000',
+          opacity: 0.3,
+        }}
+      >
+        CPE
+      </div>
 
-    <div style={{
-        position: 'absolute',
-        top: '70%',
-        left: '30%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '100px',
-        color: '#000000',
-        opacity: 0.3,
-      }}>40f5ae3573755d178953b3b203dfa5bf</div>
+      <div
+        style={{
+          position: 'absolute',
+          top: '70%',
+          left: '30%',
+          transform: 'translate(-50%, -50%)',
+          fontSize: '100px',
+          color: '#000000',
+          opacity: 0.3,
+        }}
+      >
+        40f5ae3573755d178953b3b203dfa5bf
+      </div>
 
-    {/* <div style={{
-        position: 'absolute',
-        top: '80%',
-        left: '20%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '100px',
-        color: '#000000',
-        opacity: 0.3,
-      }}>c398e5e2e45a4aa3988b867a7537fcf8c4fbeff99d2a654d0026d6e0b25fc8aa</div> */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '85%',
+          left: '15%',
+          transform: 'translate(-50%, -50%)',
+          fontSize: '100px',
+          color: '#000000',
+          opacity: 0.3,
+        }}
+      >
+        about path ⬆
+      </div>
 
-<div style={{
-        position: 'absolute',
-        top: '85%',
-        left: '15%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '100px',
-        color: '#000000',
-        opacity: 0.3,
-      }}>about path ⬆</div> 
+      <div
+        style={{
+          position: 'absolute',
+          top: '45%',
+          left: '70%',
+          transform: 'translate(-50%, -50%)',
+          fontSize: '100px',
+          color: '#000000',
+          opacity: 0.3,
+        }}
+      >
+        01d906f42732a0a06ac9d187e5e5693b
+      </div>
 
-
-
- <div style={{
-        position: 'absolute',
-        top: '45%',
-        left: '70%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '100px',
-        color: '#000000',
-        opacity: 0.3,
-      }}>01d906f42732a0a06ac9d187e5e5693b</div>
-
-<div style={{
-        position: 'absolute',
-        top: '20%',
-        left: '80%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '100px',
-        color: '#000000',
-        opacity: 0.3,
-      }}>e7aca8248896a61922065d6e412e7f2d</div> 
-
-
+      <div
+        style={{
+          position: 'absolute',
+          top: '20%',
+          left: '80%',
+          transform: 'translate(-50%, -50%)',
+          fontSize: '100px',
+          color: '#000000',
+          opacity: 0.3,
+        }}
+      >
+        e7aca8248896a61922065d6e412e7f2d
+      </div>
 
       {/* Popup */}
       {showPopup && (
@@ -135,22 +158,22 @@ const Level1: React.FC = () => {
         </div>
       )}
 
-      {/* Input และปุ่ม */}
-      <div className="input-section6">
-                        <input
-                            className="answer-input6"
-                            type="text"
-                            placeholder="Enter your answer"
-                            value={answer}
-                            onChange={(e) => setAnswer(e.target.value)}
-                        />
-                        <button className="submit-button6" onClick={handleSubmit}>
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            
-    
+{showInput && (
+  <div className="input-section6" style={{ position: 'absolute', top: '80%', left: '50%', transform: 'translateX(-50%)' }}>
+    <input
+      className="answer-input6"
+      type="text"
+      placeholder="Enter your answer"
+      value={answer}
+      onChange={(e) => setAnswer(e.target.value)}
+    />
+    <button className="submit-button6" onClick={handleSubmit}>
+      Submit
+    </button>
+  </div>
+)}
+
+    </div>
   );
 };
 

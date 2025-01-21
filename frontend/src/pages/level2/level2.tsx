@@ -26,6 +26,13 @@ const Level2: React.FC = () => {
                 text: response.message,
                 icon: response.correct ? 'success' : 'error',
                 confirmButtonText: 'OK',
+                customClass: {
+                    popup: 'custom-blue-border',
+                    confirmButton: 'custom-ok-button',
+                    icon: 'custom-icon-size'     
+                  }
+
+                
             }).then(() => {
                 // ถ้าคำตอบถูกต้อง ให้นำทางไปที่ level5 หลังจากปิด popup
                 if (response.correct) {
@@ -42,6 +49,11 @@ const Level2: React.FC = () => {
                 text: errorMessage,
                 icon: 'error',
                 confirmButtonText: 'OK',
+                customClass: {
+                    popup: 'custom-blue-border',
+                    confirmButton: 'custom-ok-button',
+                    icon: 'custom-icon-size'     
+                  }
             });
         }
     };
