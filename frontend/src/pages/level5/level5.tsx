@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const Level5: React.FC = () => {
   const key = "2b7e151628aed2a6abf7158809cf4f3c";
   const iv = "000102030405060708090a0b0c0d0e0f";
-  const cichertext = "93ba2701582e7c5c36093b493705a2b6f253de8be03fab43f7ea738926eacccb";
+ 
 
   const [answer, setAnswer] = useState<string>("");
   const [nextMessage, setNextMessage] = useState<string>("");
@@ -49,9 +49,7 @@ export const Level5: React.FC = () => {
         <button className="emoji-button" onClick={() => setShowIV((prev) => !prev)}>
           🔒
         </button>
-        <button className="emoji-button" onClick={() => setShowCiphertext((prev) => !prev)}>
-          🧩
-        </button>
+       
       </div>
 
       <div className="details-display">
@@ -65,11 +63,7 @@ export const Level5: React.FC = () => {
             <strong>🔒 IV:</strong> {iv}
           </p>
         )}
-        {showCiphertext && (
-          <p>
-            <strong>🧩 Ciphertext:</strong> {cichertext}
-          </p>
-        )}
+        
       </div>
 
       <div className="input-section">

@@ -125,7 +125,7 @@ const Level3: React.FC = () => {
           onChange={(e) => setAnswer(e.target.value)}
         />
         <button className="submit-button3" onClick={handleSubmit}>
-          Submit
+          Submit Answer
         </button>
       </div>
     </div>
