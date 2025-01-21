@@ -31,7 +31,7 @@ const Level1: React.FC = () => {
         fontSize: '100px',
         color: '#000000',
         opacity: 0.3,
-      }}>cyber</div>
+      }}>hacker</div>
 
     <div style={{
         position: 'absolute',
