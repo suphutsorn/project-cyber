@@ -168,7 +168,7 @@ const Level1: React.FC = () => {
       onChange={(e) => setAnswer(e.target.value)}
     />
     <button className="submit-button6" onClick={handleSubmit}>
-      Submit
+      Submit Answer
     </button>
   </div>
 )}

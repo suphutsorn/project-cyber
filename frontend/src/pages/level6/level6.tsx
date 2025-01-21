@@ -79,7 +79,7 @@ import { Level6Response, validateAnswerLevel6 } from '../../services/checkanswer
                             onChange={(e) => setAnswer(e.target.value)}
                         />
                         <button className="submit-button6" onClick={handleSubmit}>
-                            Submit
+                            Submit Answer
                         </button>
                     </div>
                 </div>
