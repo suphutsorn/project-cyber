@@ -24,10 +24,11 @@ export const Level5: React.FC = () => {
     try {
       const response: Level5Response = await validateAnswerLevel5(answer);
       setNextMessage(response.message);
-      navigate('/260ada252gacaw55acscacf23accac74wa00csa598ecaf256efs')
+      //navigate('/260ada252gacaw55acscacf23accac74wa00csa598ecaf256efs')
 
       if (response.correct) {
         console.log("Proceeding to the next level...");
+        navigate('/260ada252gacaw55acscacf23accac74wa00csa598ecaf256efs')
       }
     } catch (error) {
       setNextMessage((error as Error).message || "An error occurred.");

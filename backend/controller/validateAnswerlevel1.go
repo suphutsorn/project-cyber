@@ -30,7 +30,7 @@ func ValidateAnswer(c *gin.Context) {
 	}
 
 	// ตรวจสอบคำตอบ
-	correctAnswer := "cyber"
+	correctAnswer := "hacker"
 	if strings.TrimSpace(strings.ToLower(request.Answer)) == correctAnswer {
 		c.JSON(http.StatusOK, AnswerResponse{
 			Correct: true,

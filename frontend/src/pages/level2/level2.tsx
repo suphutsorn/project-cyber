@@ -7,7 +7,7 @@ const FindShareSecretNumber: React.FC = () => {
 
     const handleSubmit = () => {
         if (answer.trim()) {
-            navigate('/Level3'); // Navigate to level3 page
+            navigate('/5003746503edd054450b1ef5703449e11230c422d9a088dw'); // Navigate to level3 page
         } else {
             alert('Please enter your answer before submitting.');
         }

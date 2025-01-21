@@ -21,6 +21,7 @@ const Level1: React.FC = () => {
   };
 
   return (
+    
     <div style={{ backgroundColor: '#000000', height: '100vh', position: 'relative', color: '#FFFFFF' }}>
       {/* Hidden word "cyber" */}
       <div style={{
@@ -31,7 +32,7 @@ const Level1: React.FC = () => {
         fontSize: '100px',
         color: '#000000',
         opacity: 0.3,
-      }}>cyber</div>
+      }}>hacker</div>
 
     <div style={{
         position: 'absolute',
@@ -53,7 +54,7 @@ const Level1: React.FC = () => {
         opacity: 0.3,
       }}>40f5ae3573755d178953b3b203dfa5bf</div>
 
-    <div style={{
+    {/* <div style={{
         position: 'absolute',
         top: '80%',
         left: '20%',
@@ -61,7 +62,7 @@ const Level1: React.FC = () => {
         fontSize: '100px',
         color: '#000000',
         opacity: 0.3,
-      }}>c398e5e2e45a4aa3988b867a7537fcf8c4fbeff99d2a654d0026d6e0b25fc8aa</div>
+      }}>c398e5e2e45a4aa3988b867a7537fcf8c4fbeff99d2a654d0026d6e0b25fc8aa</div> */}
 
 <div style={{
         position: 'absolute',
@@ -71,11 +72,11 @@ const Level1: React.FC = () => {
         fontSize: '100px',
         color: '#000000',
         opacity: 0.3,
-      }}>c398e5e2e45a4aa3988d0026d6e0b25fc8</div>
+      }}>about path ⬆</div> 
 
 
 
-<div style={{
+ <div style={{
         position: 'absolute',
         top: '45%',
         left: '70%',
@@ -93,7 +94,7 @@ const Level1: React.FC = () => {
         fontSize: '100px',
         color: '#000000',
         opacity: 0.3,
-      }}>e7aca8248896a61922065d6e412e7f2d</div>
+      }}>e7aca8248896a61922065d6e412e7f2d</div> 
 
 
 
@@ -134,23 +135,22 @@ const Level1: React.FC = () => {
         </div>
       )}
 
-      {/* Input field for answer */}
-      <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
-        <input
-          type="text"
-          value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
-          placeholder="Enter your answer"
-          style={{ padding: '10px', fontSize: '16px', width: '300px', marginRight: '10px', color: '#FFFFFF', backgroundColor: '#333333' }}
-        />
-        <button
-          onClick={handleSubmit}
-          style={{ padding: '10px', fontSize: '16px', cursor: 'pointer', backgroundColor: '#555555', color: '#FFFFFF', border: 'none', borderRadius: '5px' }}
-        >
-          Submit
-        </button>
-      </div>
-    </div>
+      {/* Input และปุ่ม */}
+      <div className="input-section6">
+                        <input
+                            className="answer-input6"
+                            type="text"
+                            placeholder="Enter your answer"
+                            value={answer}
+                            onChange={(e) => setAnswer(e.target.value)}
+                        />
+                        <button className="submit-button6" onClick={handleSubmit}>
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            
+    
   );
 };
 
