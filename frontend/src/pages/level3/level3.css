@@ -85,10 +85,13 @@
     font-size: 18px;
     color: #ffcc00; /* สีเหลืองเพื่อเน้น */
     font-family: 'Arial', sans-serif;
-    margin-top: 10px;
+    margin-top: 15px;
+    
   }
   body {
     overflow: hidden; /* ซ่อนการเลื่อน */
     margin: 0; /* ลบ margin เพื่อให้คอนเทนต์ชิดขอบ */
     height: 100%; /* ตั้งความสูงเต็มจอ */
   }
+
+  

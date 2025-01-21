@@ -21,6 +21,11 @@ import { Level6Response, validateAnswerLevel6 } from '../../services/checkanswer
                         text: response.message,
                         icon: response.correct ? 'success' : 'error',
                         confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'custom-blue-border',
+                            confirmButton: 'custom-ok-button',
+                            icon: 'custom-icon-size'     
+                          }
                     }).then(() => {
                         if (response.correct) {
                             navigate('/end');
@@ -35,6 +40,11 @@ import { Level6Response, validateAnswerLevel6 } from '../../services/checkanswer
                         text: errorMessage,
                         icon: 'error',
                         confirmButtonText: 'OK',
+                        customClass: {
+                            popup: 'custom-blue-border',
+                            confirmButton: 'custom-ok-button',
+                            icon: 'custom-icon-size'     
+                          }
                     });
                 }
             };
@@ -42,6 +52,9 @@ import { Level6Response, validateAnswerLevel6 } from '../../services/checkanswer
             return (
                 <div style={{ backgroundColor: '#000000', height: '100vh', position: 'relative', color: '#FFFFFF' }}>
                     <h1 className="decode-title">From what you got guess it !</h1>
+                    <p className="hint-text">
+                    💡 Hint: Have 2 <b>words </b>begin with <b>Capital letter</b>✨
+                    </p>
                 <div className="level6-container">
                 {/* ก้อนที่ 1: 3 รูปเรียงกัน */}
                 <div className="image-group1">

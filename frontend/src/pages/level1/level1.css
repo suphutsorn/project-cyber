@@ -126,7 +126,3 @@
   height: 100vh;
   background-color: #000000;
 }
-
-.answer-input1::placeholder {
-  color: black;
-}
