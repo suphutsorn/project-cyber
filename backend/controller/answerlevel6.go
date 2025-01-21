@@ -38,7 +38,7 @@ func ValidateAnswerLevel6(c *gin.Context) {
 	if strings.TrimSpace(strings.ToLower(request.Answer)) == strings.TrimSpace(strings.ToLower(correctAnswer)) {
 		c.JSON(http.StatusOK, AnswerResponse6{
 			Correct: true,
-			Message: "🎉 คำตอบถูกต้อง! ยินดีต้อนรับสู่ Level ถัดไป!", // ส่งข้อความเมื่อคำตอบถูกต้อง
+			Message: "🎉 คำตอบถูกต้อง! ยินดีด้วยคุณคือผู้ชนะ!", // ส่งข้อความเมื่อคำตอบถูกต้อง
 		})
 	} else {
 		c.JSON(http.StatusOK, AnswerResponse6{

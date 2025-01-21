@@ -3,6 +3,7 @@ import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { validateAnswerlevel4, AnswerResponse } from '../../services/checkanswerlevel4';
+import Swal from 'sweetalert2';
 
 const DownloadPage: React.FC = () => {
     const [answer, setAnswer] = useState('');
@@ -40,19 +41,52 @@ const DownloadPage: React.FC = () => {
         }
     };
 
-    const handleSubmit = async () => {
+    // const handleSubmit = async () => {
+    //     try {
+    //         const response: AnswerResponse = await validateAnswerlevel4(answer);
+    //         setNextMessage(response.message);
+
+    //         // ถ้าคำตอบถูกต้อง นำทางไปที่ level5
+    //         if (response.correct) {
+    //             navigate('/5003746503edd054450b1ef5703449e11230c420d0be521e80936ddfa1e9e6ad');
+    //         }
+    //     } catch (error) {
+    //         setNextMessage((error as Error).message || 'An error occurred while validating the answer.');
+    //     }
+    // };
+
+     const handleSubmit = async () => {
         try {
             const response: AnswerResponse = await validateAnswerlevel4(answer);
-            setNextMessage(response.message);
-
-            // ถ้าคำตอบถูกต้อง นำทางไปที่ level5
+          console.log(response.message);
+          console.log(nextMessage);
+          setNextMessage(response.message);
+    
+          // แสดง popup ทุกกรณี ไม่ว่าจะตอบถูกหรือผิด
+          Swal.fire({
+            title: response.correct ? 'Correct Answer' : 'Incorrect Answer',
+            text: response.message,
+            icon: response.correct ? 'success' : 'error',
+            confirmButtonText: 'OK',
+          }).then(() => {
+            // ถ้าคำตอบถูกต้อง ให้นำทางไปที่ level5 หลังจากปิด popup
             if (response.correct) {
-                navigate('/5003746503edd054450b1ef5703449e11230c420d0be521e80936ddfa1e9e6ad');
+              navigate('/5003746503edd054450b1ef5703449e11230c420d0be521e80936ddfa1e9e6ad');
             }
+          });
         } catch (error) {
-            setNextMessage((error as Error).message || 'An error occurred while validating the answer.');
+          const errorMessage = (error as Error).message || 'An error occurred while validating the answer.';
+          setNextMessage(errorMessage);
+    
+          // แสดง popup เมื่อเกิดข้อผิดพลาด
+          Swal.fire({
+            title: 'Error',
+            text: errorMessage,
+            icon: 'error',
+            confirmButtonText: 'OK',
+          });
         }
-    };
+      };
 
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center', margin: '50px' }}>

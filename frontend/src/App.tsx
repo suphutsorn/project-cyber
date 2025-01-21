@@ -16,6 +16,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/Covercyber" />} />
         <Route path="/c2d6adc3ff8723076e8a6d68ccd861cbc31cc8530b524458c04da57b6d7661f5" element={<Level1 />} />
+        <Route path="/c2d6adc3ff8723076e8a6d68ccd861cbc31cc8530b524458c04da57b6d7661f5/hacker" element={< FindShareSecretNumber />} />
         <Route path ="/5003746503edd054450b1ef5703449e11230c422d9a088dw" element={<Level3/>} />
         <Route path="/006cc294a3f3688df73e08971f12f5e8" element={<DownloadPage/>} />
         <Route path="/Level2" element={<FindShareSecretNumber/>} />
