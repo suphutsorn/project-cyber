@@ -12,7 +12,6 @@ export const Level5: React.FC = () => {
   const [nextMessage, setNextMessage] = useState<string>("");
   const [showKey, setShowKey] = useState<boolean>(false);
   const [showIV, setShowIV] = useState<boolean>(false);
-  const [showCiphertext, setShowCiphertext] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
