@@ -1,0 +1,94 @@
+.input-section2 {
+    position: absolute;
+    bottom: 50px;  /* ระยะห่างจากด้านล่างของหน้าจอ */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่าง input และ button */
+    align-items: center;
+}
+
+.answer-input2 {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #1e90ff; /* เส้นขอบฟ้าเข้ม */
+    border-radius: 5px;
+    background-color: #121212;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.answer-input2:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+}
+
+.submit-button2 {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    color: #ffffff;
+    background: linear-gradient(to right, #1c1c1c, #2f2f2f); /* ไล่สีดำ */
+    border: 2px solid #1e90ff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-button2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+}
+
+.download-link-container {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .download-link {
+    font-size: 16px;
+    background-color: #000;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .download-link:hover {
+    transform: scale(1.1); /* ขยายขนาดเมื่อ hover */
+    border: 2px solid #00f; /* เส้นขอบสีฟ้า */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* แสงเงาสีฟ้าล้อมรอบ */
+    background-color: #008cff; /* เปลี่ยนสีพื้นหลัง */
+    color: #000; /* เปลี่ยนสีข้อความ */
+  }
+  
+  .decode-title {
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    font-size: 48px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ทำตัวอักษรหนา */
+    color: #077df4; /* สีเขียว */
+    margin-top: 20px; /* เพิ่มช่องว่างด้านบน */
+    text-shadow: 2px 2px 8px rgba(232, 235, 232, 0.7); /* เพิ่มเงาเพื่อความโดดเด่น */
+    font-family: 'Arial', sans-serif; /* ใช้ฟอนต์ Arial */
+    letter-spacing: 2px; /* เพิ่มช่องว่างระหว่างตัวอักษร */
+  }
+
+  .hint-text {
+    text-align: center;
+    font-size: 18px;
+    color: #ffcc00; /* สีเหลืองเพื่อเน้น */
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
+  }
+  body {
+    overflow: hidden; /* ซ่อนการเลื่อน */
+    margin: 0; /* ลบ margin เพื่อให้คอนเทนต์ชิดขอบ */
+    height: 100%; /* ตั้งความสูงเต็มจอ */
+  }

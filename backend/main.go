@@ -23,8 +23,11 @@ func main() {
 
 	// Register routes
 	r.POST("/validate-answer", controllers.ValidateAnswer)
+	r.POST("/validate-level2", controllers.ValidateAnswerLevel2)
+	r.POST("/validate-level3", controllers.ValidateAnswerLevel3)
 	r.POST("/validate-answer4", controllers.ValidateAnswerlevel4)
 	r.POST("/validate-level5", controllers.ValidateAnswerLevel5)
+	r.POST("/validate-level6", controllers.ValidateAnswerLevel6)
 
 	// เริ่มเซิร์ฟเวอร์ที่พอร์ต 8080
 	r.Run(":8080")
