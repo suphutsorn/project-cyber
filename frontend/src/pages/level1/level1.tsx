@@ -139,7 +139,7 @@ const Level1: React.FC = () => {
             textAlign: 'center',
           }}
         >
-          <p style={{ fontSize: '18px', fontWeight: 'bold' }}>มาถูกแล้ว อีกนิดเดียว!</p>
+          <p style={{ fontSize: '18px', fontWeight: 'bold' }}>มาถูกทางแล้ว แต่ยังไม่ใช่ สู้อีกนิดนะฮ้าฟ!</p>
         </div>
       )}
 
