@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./level5.css";
 import { validateAnswerLevel5, Level5Response } from "../../services/checkanswerlevel5";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 export const Level5: React.FC = () => {
   const key = "2b7e151628aed2a6abf7158809cf4f3c";
@@ -14,25 +15,47 @@ export const Level5: React.FC = () => {
   const [showIV, setShowIV] = useState<boolean>(false);
   const navigate = useNavigate();
 
+
+
   const handleSubmit = async () => {
-    if (answer.trim() === "") {
-      setNextMessage("⚠️ Please enter an answer.");
-      return;
-    }
-
-    try {
-      const response: Level5Response = await validateAnswerLevel5(answer);
-      setNextMessage(response.message);
-      if (response.correct) {
-        console.log("Proceeding to the next level...");
-        navigate('/260ada252gacaw55acscacf23accac74wa00csa598ecaf256efs')
+      if (answer.trim() === "") {
+          setNextMessage("⚠️ Please enter an answer.");
+          console.log(nextMessage)
+          return;
       }
-    } catch (error) {
-      setNextMessage((error as Error).message || "An error occurred.");
-      
-    }
+  
+      try {
+          const response: Level5Response = await validateAnswerLevel5(answer);
+          setNextMessage(response.message);
+  
+          Swal.fire({
+              title: response.correct ? 'Correct Answer' : 'Incorrect Answer',
+              text: response.message,
+              icon: response.correct ? 'success' : 'error',
+              confirmButtonText: 'OK',
+              customClass: {
+                  popup: 'custom-blue-border',
+                  confirmButton: 'custom-ok-button',
+                  icon: 'custom-icon-size'
+              }
+          }).then((result) => {
+              if (result.isConfirmed && response.correct) {
+                  console.log("Proceeding to the next level...");
+                  navigate('/260ada252gacaw55acscacf23accac74wa00csa598ecaf256efs');
+              }
+          });
+  
+      } catch (error) {
+          setNextMessage((error as Error).message || "An error occurred.");
+  
+          Swal.fire({
+              title: "Error",
+              text: (error as Error).message || "An error occurred.",
+              icon: "error",
+              confirmButtonText: "OK",
+          });
+      }
   };
-
   return (
     <div className="container">
       <h1 className="title">
@@ -78,7 +101,7 @@ export const Level5: React.FC = () => {
         </button>
       </div>
 
-      {nextMessage && <div className="next-message">{nextMessage}</div>}
+      
     </div>
   );
 };
