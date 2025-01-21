@@ -73,14 +73,31 @@ const Level2: React.FC = () => {
             alignItems: 'center'
         }}>
             <h1 style={{ fontSize: '3rem', marginBottom: '20px' }}>Find Share Secret Number</h1>
-            {/* <div style={{ fontSize: '5rem', marginBottom: '20px' }}>👨‍🍳</div> */}
+            <div style={{
+                fontSize: '5rem',
+                marginBottom: '20px',
+                position: 'fixed', // ใช้ fixed เพื่อให้อยู่ตำแหน่งคงที่บนหน้าจอ
+                top: '20px', // ระยะจากด้านบน
+                right: '20px', // ระยะจากด้านขวา
+            }}>👨‍🍳</div>
 
 
             <div style={{ fontSize: '1.5rem', marginBottom: '20px', color: 'yellow' }}>
-                Ciphertext: "Fxatrwp rw Lxvydcna Nwprwnnarwp" && "Cqn yaxonbbxa xo cqrb bdksnlc"
+                Ciphertext: "Fxatrwp rw Lxvydcna Nwprwnnarwp" && "Kyv gifwvjjfi fw kyzj jlsavtk"
             </div>
             <div style={{ fontSize: '1.0rem', marginBottom: '20px', color: 'orange' }}>
                 (ชัดมากๆดูออกมั้ยนะ)
+            </div>
+
+            <div style={{
+                fontSize: '1rem',
+                marginBottom: '20px',
+                color: 'black',
+                display: 'flex',         // ใช้ flexbox เพื่อจัดเรียง
+                justifyContent: 'center', // จัดให้อยู่กลาง
+                alignItems: 'center',    // จัดแนวตั้งให้อยู่ตรงกลาง
+                gap: '15px'              // ระยะห่างระหว่างภาพ
+            }}> g^a mod p
             </div>
 
             <div style={{
@@ -97,50 +114,21 @@ const Level2: React.FC = () => {
                 <img src={A} alt="a" style={{ width: '100%', maxWidth: '360px' }} />
             </div>
 
-            <div
-                style={{
-                    display: 'flex', // ใช้ flexbox สำหรับจัดเรียง
-                    justifyContent: 'center', // จัดให้อยู่กลางในแนวนอน
-                    alignItems: 'center', // จัดให้อยู่กลางในแนวตั้ง
-                    gap: '10px', // ระยะห่างระหว่าง input และปุ่ม
-                    marginBottom: '20px'
-                }}
-            >
+            <div className="input-section2">
                 <input
+                    className="answer-input2"
                     type="text"
+                    placeholder="Enter your answer"
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)}
-                    placeholder="Enter your answer"
-                    style={{
-                        padding: '10px',
-                        fontSize: '1.2rem',
-                        width: '300px',
-                        border: '2px solid #00f',
-                        borderRadius: '5px',
-                        backgroundColor: '#222',
-                        color: '#fff'
-                    }}
                 />
-
-                <button
-                    onClick={handleSubmit}
-                    style={{
-                        padding: '10px 20px',
-                        fontSize: '1.2rem',
-                        border: 'none',
-                        borderRadius: '5px',
-                        backgroundColor: '#00f',
-                        color: '#fff',
-                        cursor: 'pointer'
-                    }}
-                >
+                <button className="submit-button2" onClick={handleSubmit}>
                     Submit
                 </button>
             </div>
-            <div style={{ fontSize: '1.0rem', marginBottom: '20px', color: 'red' }}>
-                hint: The answer is our language.
-            </div>
-
+            <div className="hint-text2">
+                    hint: The answer is our language.
+                </div>
         </div>
     );
 };
