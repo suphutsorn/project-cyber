@@ -17,9 +17,9 @@ const DownloadPage: React.FC = () => {
             const folder = zip.folder("images");
             if (folder) {
                 const imagePaths = [
-                    { name: "NDA0MQ==.jpg", path: "/files/NDA0MQ==.jpg" },
+                    { name: "da0b566359c3862f20b5072c3d49bd0f.jpg", path: "da0b566359c3862f20b5072c3d49bd0f.jpg" },
                     { name: "Rm9vbGVkQWdhaW4h.jpeg", path: "/files/Rm9vbGVkQWdhaW4h.jpeg" },
-                    { name: "RU5HMjM=.png", path: "/files/RU5HMjM=.png" },
+                    { name: "d9689ff04b1b8f344bb5ab823199e932.png", path: "files/d9689ff04b1b8f344bb5ab823199e932.png" },
                     { name: "VGhpc0lzTm90QW5zd2Vy.jpeg", path: "/files/VGhpc0lzTm90QW5zd2Vy.jpeg" },
                     { name: "VWgtT2ghTm90VGhpc09uZQ==.png", path: "/files/VWgtT2ghTm90VGhpc09uZQ==.png" }
                 ];
@@ -125,12 +125,12 @@ const DownloadPage: React.FC = () => {
             {/* เพิ่มรูปภาพ */}
             <div style={{ marginTop: '30px', display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
                 <img
-                    src="/files/ช่องปีบ1.jpeg"
+                    src="files/unnamed.jpg"
                     alt="รูป 1"
                     style={{ width: '300px', height: '300px', objectFit: 'cover', borderRadius: '10px' }}
                 />
                 <img
-                    src="/files/ดอกปีบ2.jpeg"
+                    src="files/10307920.png"
                     alt="รูป 2"
                     style={{ width: '300px', height: '300px', objectFit: 'cover', borderRadius: '10px' }}
                 />
