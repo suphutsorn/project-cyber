@@ -32,7 +32,7 @@ func ValidateAnswerlevel4(c *gin.Context) {
 	}
 
 	// คำตอบที่ถูกต้อง
-	correctAnswer := "ENG23 4041"
+	correctAnswer := "708cb54751c24501ed30efa0ed273b40"
 
 	// ตรวจสอบคำตอบโดยการแปลงเป็นตัวพิมพ์เล็ก และตัดช่องว่าง
 	if strings.TrimSpace(strings.ToLower(request.Answer)) == strings.TrimSpace(strings.ToLower(correctAnswer)) {

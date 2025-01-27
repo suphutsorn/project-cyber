@@ -17,11 +17,11 @@ const DownloadPage: React.FC = () => {
             const folder = zip.folder("images");
             if (folder) {
                 const imagePaths = [
-                    { name: "da0b566359c3862f20b5072c3d49bd0f.jpg", path: "da0b566359c3862f20b5072c3d49bd0f.jpg" },
-                    { name: "Rm9vbGVkQWdhaW4h.jpeg", path: "/files/Rm9vbGVkQWdhaW4h.jpeg" },
-                    { name: "d9689ff04b1b8f344bb5ab823199e932.png", path: "files/d9689ff04b1b8f344bb5ab823199e932.png" },
-                    { name: "VGhpc0lzTm90QW5zd2Vy.jpeg", path: "/files/VGhpc0lzTm90QW5zd2Vy.jpeg" },
-                    { name: "VWgtT2ghTm90VGhpc09uZQ==.png", path: "/files/VWgtT2ghTm90VGhpc09uZQ==.png" }
+                    { name: "ENG23 4041.jpg", path: "/files/ENG23 4041.jpg" },
+                    { name: "ENG23 3032.jpeg", path: "/files/ENG23 3032.jpeg" },
+                    { name: "ENG23 3052.png", path: "files/ENG23 3052.png" },
+                    { name: "ENG23 3054.jpeg", path: "/files/ENG23 3054.jpeg" },
+                    { name: "ISP30 1105.png", path: "/files/ISP30 1105.png" }
                 ];
 
                 for (const image of imagePaths) {
